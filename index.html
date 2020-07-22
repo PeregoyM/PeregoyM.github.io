@@ -13099,6 +13099,7 @@ Who will save us?</p>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>                      <span class="c1"># ndarrays</span>
 <span class="kn">from</span> <span class="nn">plotnine</span> <span class="kn">import</span> <span class="o">*</span>                  <span class="c1"># descriptive plotting</span>
 <span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>            <span class="c1"># simple linear regression model</span>
+<span class="kn">import</span> <span class="nn">statsmodels.formula.api</span> <span class="k">as</span> <span class="nn">smf</span>   <span class="c1"># other linear regression needs</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span> <span class="c1"># for training data</span>
 </pre></div>
 
@@ -14212,7 +14213,7 @@ memory usage: 799.3+ KB
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;ggplot: (8737104986937)&gt;</pre>
+<pre>&lt;ggplot: (8768536618229)&gt;</pre>
 </div>
 
 </div>
@@ -14240,7 +14241,7 @@ memory usage: 799.3+ KB
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;ggplot: (8737099691373)&gt;</pre>
+<pre>&lt;ggplot: (8768531267033)&gt;</pre>
 </div>
 
 </div>
@@ -14268,7 +14269,7 @@ memory usage: 799.3+ KB
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;ggplot: (8737097918357)&gt;</pre>
+<pre>&lt;ggplot: (8768529065621)&gt;</pre>
 </div>
 
 </div>
@@ -14296,7 +14297,7 @@ memory usage: 799.3+ KB
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;ggplot: (8737099637769)&gt;</pre>
+<pre>&lt;ggplot: (8768531359769)&gt;</pre>
 </div>
 
 </div>
@@ -14409,7 +14410,7 @@ memory usage: 799.3+ KB
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;ggplot: (8737099656373)&gt;</pre>
+<pre>&lt;ggplot: (8768531350121)&gt;</pre>
 </div>
 
 </div>
@@ -14437,7 +14438,7 @@ memory usage: 799.3+ KB
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;ggplot: (8737096828129)&gt;</pre>
+<pre>&lt;ggplot: (8768528536497)&gt;</pre>
 </div>
 
 </div>
@@ -14465,7 +14466,7 @@ memory usage: 799.3+ KB
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;ggplot: (8737097442429)&gt;</pre>
+<pre>&lt;ggplot: (8768529298589)&gt;</pre>
 </div>
 
 </div>
@@ -14493,7 +14494,7 @@ memory usage: 799.3+ KB
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;ggplot: (8737097089589)&gt;</pre>
+<pre>&lt;ggplot: (8768528845661)&gt;</pre>
 </div>
 
 </div>
@@ -14521,7 +14522,7 @@ memory usage: 799.3+ KB
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;ggplot: (8737100083945)&gt;</pre>
+<pre>&lt;ggplot: (8768531251005)&gt;</pre>
 </div>
 
 </div>
@@ -14636,7 +14637,7 @@ memory usage: 799.3+ KB
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;ggplot: (8737105109457)&gt;</pre>
+<pre>&lt;ggplot: (8768582916409)&gt;</pre>
 </div>
 
 </div>
@@ -14664,7 +14665,7 @@ memory usage: 799.3+ KB
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;ggplot: (8737100073449)&gt;</pre>
+<pre>&lt;ggplot: (8768529157045)&gt;</pre>
 </div>
 
 </div>
@@ -14692,7 +14693,7 @@ memory usage: 799.3+ KB
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;ggplot: (8737097124801)&gt;</pre>
+<pre>&lt;ggplot: (8768529214229)&gt;</pre>
 </div>
 
 </div>
@@ -14720,7 +14721,7 @@ memory usage: 799.3+ KB
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;ggplot: (8737096497653)&gt;</pre>
+<pre>&lt;ggplot: (8768531742457)&gt;</pre>
 </div>
 
 </div>
@@ -14748,7 +14749,7 @@ memory usage: 799.3+ KB
 
 
 <div class="output_text output_subarea ">
-<pre>&lt;ggplot: (8737099754489)&gt;</pre>
+<pre>&lt;ggplot: (8768531676821)&gt;</pre>
 </div>
 
 </div>
@@ -14818,7 +14819,7 @@ memory usage: 799.3+ KB
   <th>Date:</th>             <td>Tue, 21 Jul 2020</td> <th>  Prob (F-statistic):</th>   <td>  0.00</td>   
 </tr>
 <tr>
-  <th>Time:</th>                 <td>23:39:34</td>     <th>  Log-Likelihood:    </th> <td>-1.2820e+05</td>
+  <th>Time:</th>                 <td>23:44:44</td>     <th>  Log-Likelihood:    </th> <td>-1.2820e+05</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>  6820</td>      <th>  AIC:               </th>  <td>2.564e+05</td> 
@@ -14925,7 +14926,7 @@ memory usage: 799.3+ KB
   <th>Date:</th>             <td>Tue, 21 Jul 2020</td> <th>  Prob (F-statistic):</th>   <td>  0.00</td>   
 </tr>
 <tr>
-  <th>Time:</th>                 <td>23:39:34</td>     <th>  Log-Likelihood:    </th> <td>-1.2820e+05</td>
+  <th>Time:</th>                 <td>23:44:44</td>     <th>  Log-Likelihood:    </th> <td>-1.2820e+05</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>  6820</td>      <th>  AIC:               </th>  <td>2.564e+05</td> 
@@ -15035,19 +15036,104 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-10-ed1dcbcd2eef&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> X_train<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;profit&#39;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> y_train
-<span class="ansi-green-intense-fg ansi-bold">      5</span> 
-<span class="ansi-green-fg">----&gt; 6</span><span class="ansi-red-fg"> </span>res <span class="ansi-blue-fg">=</span> smf<span class="ansi-blue-fg">.</span>ols<span class="ansi-blue-fg">(</span>formula<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;profit ~ votes + budget + runtime&#39;</span><span class="ansi-blue-fg">,</span> data<span class="ansi-blue-fg">=</span>X_train<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>fit<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      7</span> 
-<span class="ansi-green-intense-fg ansi-bold">      8</span> dfs <span class="ansi-blue-fg">=</span> pd<span class="ansi-blue-fg">.</span>DataFrame<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;smf&#39; is not defined</pre>
+<div class="output_html rendered_html output_subarea ">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>profit</th>
+      <th>predictions</th>
+      <th>accuracy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>5540</th>
+      <td>45662220.0</td>
+      <td>2.837188e+07</td>
+      <td>0.378658</td>
+    </tr>
+    <tr>
+      <th>3412</th>
+      <td>302365.0</td>
+      <td>4.297578e+06</td>
+      <td>-13.213214</td>
+    </tr>
+    <tr>
+      <th>6495</th>
+      <td>1590010.0</td>
+      <td>6.777905e+06</td>
+      <td>-3.262807</td>
+    </tr>
+    <tr>
+      <th>2660</th>
+      <td>75317794.0</td>
+      <td>2.696680e+07</td>
+      <td>0.641960</td>
+    </tr>
+    <tr>
+      <th>5437</th>
+      <td>-24793912.0</td>
+      <td>-4.877268e+06</td>
+      <td>0.803288</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2988</th>
+      <td>4170647.0</td>
+      <td>4.918345e+06</td>
+      <td>-0.179276</td>
+    </tr>
+    <tr>
+      <th>946</th>
+      <td>25069101.0</td>
+      <td>1.986258e+06</td>
+      <td>0.920769</td>
+    </tr>
+    <tr>
+      <th>4130</th>
+      <td>75829.0</td>
+      <td>1.742045e+06</td>
+      <td>-21.973336</td>
+    </tr>
+    <tr>
+      <th>6812</th>
+      <td>23020.0</td>
+      <td>2.958797e+06</td>
+      <td>-127.531593</td>
+    </tr>
+    <tr>
+      <th>5884</th>
+      <td>-7402102.0</td>
+      <td>4.511276e+06</td>
+      <td>1.609459</td>
+    </tr>
+  </tbody>
+</table>
+<p>1705 rows × 3 columns</p>
 </div>
+</div>
+
 </div>
 
 </div>
@@ -15056,7 +15142,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># lets check accuracy averages</span>
@@ -15064,6 +15150,29 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_text output_subarea ">
+<pre>profit         9.338346e+06
+predictions    8.501594e+06
+accuracy      -1.628698e+01
+dtype: float64</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
